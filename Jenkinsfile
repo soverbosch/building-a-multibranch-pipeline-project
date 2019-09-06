@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo npm install'
+                sh './jenkins/scripts/test.sh'
             }
         }
         stage('Test') {
@@ -36,19 +36,7 @@ pipeline {
                 branch 'development'
             }
             steps {
-                sh 'echo ./jenkins/scripts/deliver-for-development.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh 'echo ./jenkins/scripts/kill.sh'
-            }
-        }
-        stage('Deploy for production') {
-            when {
-                branch 'production'
-            }
-            steps {
-                sh './jenkins/scripts/deploy-for-production.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './jenkins/scripts/kill.sh'
+                sh './jenkins/scripts/test.sh'
             }
         }
     }
