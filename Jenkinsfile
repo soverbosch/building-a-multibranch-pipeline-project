@@ -25,8 +25,10 @@ pipeline {
             }
         }
         stage('Test') {
-            withEnv(["X=Y"]) {
-                sh './jenkins/scripts/test.sh'
+            steps {
+                withEnv(["X=Y"]) {
+                    sh './jenkins/scripts/test.sh'
+                }
             }
         }
         stage('Deliver for development') {
