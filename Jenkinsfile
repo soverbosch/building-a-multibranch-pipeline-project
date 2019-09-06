@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                withEnv(['COMPONENT=${params.component}']) {
+                withEnv(['COMPONENT=XXXXX']) {
                     sh './jenkins/scripts/test.sh'
                 }
             }
