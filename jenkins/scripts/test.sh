@@ -5,5 +5,6 @@ echo "APP = ${APP}"
 echo "TYPE = ${TYPE}"
 echo "COMPONENT = ${COMPONENT}"
 
-set
+echo "type = ${type}"
+echo "component = ${component}"
 
