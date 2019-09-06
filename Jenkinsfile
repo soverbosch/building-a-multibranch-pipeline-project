@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                withEnv() {
+                withEnv([]) {
                     sh './jenkins/scripts/test.sh'
                 }
             }
