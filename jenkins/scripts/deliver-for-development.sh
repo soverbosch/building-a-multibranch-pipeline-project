@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+echo "CI = ${CI}"
+
 echo 'The following "npm" command runs your Node.js/React application in'
 echo 'development mode and makes the application available for web browsing.'
 echo 'The "npm start" command has a trailing ampersand so that the command runs'
