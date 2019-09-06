@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 echo "CI = ${CI}"
+echo "COMPONENT = ${COMPONENT}"
 
 echo 'The following "npm" command (if executed) installs the "cross-env"'
 echo 'dependency into the local "node_modules" directory, which will ultimately'
